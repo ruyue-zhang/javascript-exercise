@@ -6,6 +6,7 @@ class Student extends Person {
     super(name, age);
     this.klass = klass;
   }
+
   introduce() {
     return `I am a Student. I am at Class ${this.klass}.`;
   }
