@@ -5,10 +5,10 @@ function fetchData(url) {
     // TODO 22: 通过Promise实现异步请求
     xhr.open('GET', url);
     xhr.onreadystatechange = function() {
-      if (4 !== xhr.readyState) {
+      if (xhr.readyState !== 4) {
         return;
       }
-      if (200 === xhr.status) {
+      if (xhr.status === 200) {
         resolve(xhr.responseText);
       } else {
         reject(xhr.statusText);
